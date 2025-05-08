@@ -1,22 +1,91 @@
+/* === General layout === */
 body {
   font-family: sans-serif;
-  background: url('images/forest2.png') no-repeat center center fixed;
-  background-size: cover;
+  background: url('images/forest.png') center center / cover no-repeat fixed;
   color: #2b2b2b;
   margin: 0;
   padding: 2rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+}
+
+/* === Hero section === */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.spacer {
+  height: 2rem;
+}
+
+.cta-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-buttons .button,
+a.button,
+.cta-box button {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* === Content sections on subpages === */
+.content {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
 }
 
 h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
-}
-
-header h1 {
-  color: darkgreen;
+  color: #2b2b2b;
 }
 
 h2 {
@@ -29,30 +98,13 @@ p, ul {
   line-height: 1.6;
 }
 
+ul {
+  padding-left: 1.2rem;
+}
+
 a {
   color: #4caf50;
   text-decoration: none;
-}
-
-a.button, .cta-box button {
-  background-color: #4caf50;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.content {
-  background-color: rgba(255, 255, 255, 0.75); /* translucent white */
-  padding: 2rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .math-box {
@@ -72,91 +124,21 @@ a.button, .cta-box button {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.box {
-  background-color: white;
-  border: 1px solid #d1d1d1;
-  border-left: 6px solid #4caf50;
-  padding: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  text-decoration: none;
-  color: inherit;
-}
-
-header {
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-}
-
 @media (max-width: 600px) {
   body {
     padding: 1rem;
   }
 
-  h1 {
-    font-size: 1.5rem;
+  .hero-text h1 {
+    font-size: 1.8rem;
   }
 
+  .hero-text p,
   h2 {
     font-size: 1.1rem;
   }
-}
 
-.hero {
-  background: url('assets/images/forest.png') center center / cover no-repeat;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-  color: white;
-  position: relative;
+  .cta-buttons {
+    flex-direction: column;
+  }
 }
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* dark overlay for contrast */
-  z-index: 0;
-}
-
-.hero-text {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-text p {
-  font-size: 1.25rem;
-  margin: 0.5rem 0;
-}
-
-.cta-buttons {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.cta-buttons .button {
-  background-color: #4caf50;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
