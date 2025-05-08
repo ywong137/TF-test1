@@ -142,3 +142,21 @@ a {
     flex-direction: column;
   }
 }
+
+.box {
+  background-color: white;
+  border: 2px solid #4caf50;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.1s ease;
+}
+
+.box:hover {
+  background-color: #e8f5e9;
+  transform: scale(1.02);
+}
