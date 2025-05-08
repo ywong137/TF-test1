@@ -39,6 +39,7 @@ body {
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: white; /* <-- make sure this line is present */
 }
 
 .hero-text p {
@@ -154,9 +155,12 @@ a {
   font-size: 1.1rem;
   cursor: pointer;
   transition: transform 0.1s ease, background 0.1s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
-
 .box:hover {
   background-color: #e8f5e9;
   transform: scale(1.02);
 }
+
