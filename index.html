@@ -1,14 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reforest the Future</title>
   <style>
-    body { font-family: sans-serif; margin: 2rem; }
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7f2;
+      color: #2b2b2b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .box {
+      background-color: white;
+      border: 1px solid #d1d1d1;
+      border-left: 6px solid #4caf50;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s ease;
+    }
+
+    .box:hover {
+      background-color: #eef7ee;
+    }
+
+    .box h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .box h2 {
+        font-size: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Hello, world</h1>
-  <p>This is my first page.</p>
+  <header>
+    <h1>How do you want to help reforest the planet?</h1>
+  </header>
+
+  <div class="container">
+    <a class="box" href="mighty.html">
+      <h2>You are wealthy and want to use your money to make a big impact</h2>
+      <p>Learn how large-scale commitments can unlock climate solutions.</p>
+    </a>
+    <a class="box" href="medium.html">
+      <h2>You make good money and want to contribute</h2>
+      <p>See how planting just one tree a month adds up to a global solution.</p>
+    </a>
+    <a class="box" href="many.html">
+      <h2>You have more time than money and want to do your part</h2>
+      <p>Find resources and guidance to plant trees yourself, the right way.</p>
+    </a>
+  </div>
 </body>
 </html>
