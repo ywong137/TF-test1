@@ -1,11 +1,11 @@
-/* === General layout === */
+/* === Base styles === */
 body {
   font-family: sans-serif;
   background: url('images/forest.png') center center / cover no-repeat fixed;
-  color: #2b2b2b;
+  color: #eaeaea;
   margin: 0;
   padding: 2rem;
-  max-width: 800px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -27,7 +27,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
@@ -39,7 +39,7 @@ body {
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: white; /* <-- make sure this line is present */
+  color: white;
 }
 
 .hero-text p {
@@ -51,6 +51,7 @@ body {
   height: 2rem;
 }
 
+/* === CTA buttons === */
 .cta-buttons {
   margin-top: 2rem;
   display: flex;
@@ -74,19 +75,22 @@ a.button,
   cursor: pointer;
 }
 
-/* === Content sections on subpages === */
+/* === Content wrapper === */
 .content {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.92);
   padding: 2rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   margin-top: 2rem;
+  color: #2b2b2b;
 }
 
+/* === Typography === */
 h1 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #2b2b2b;
+  text-align: center;
+  color: #1b4d1b; /* dark green */
+  margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -108,6 +112,7 @@ a {
   text-decoration: none;
 }
 
+/* === Highlight boxes === */
 .math-box {
   background: #e8f5e9;
   border-left: 6px solid #4caf50;
@@ -125,6 +130,35 @@ a {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
+/* === go.html layout fixes === */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.box {
+  background-color: white;
+  border: 2px solid #4caf50;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s ease;
+}
+
+.box:hover {
+  background-color: #f2fff2;
+}
+
+/* === Mobile adjustments === */
 @media (max-width: 600px) {
   body {
     padding: 1rem;
@@ -143,24 +177,3 @@ a {
     flex-direction: column;
   }
 }
-
-.box {
-  background-color: white;
-  border: 2px solid #4caf50;
-  border-radius: 6px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: transform 0.1s ease, background 0.1s ease;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-.box:hover {
-  background-color: #e8f5e9;
-  transform: scale(1.02);
-}
-
