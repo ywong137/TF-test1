@@ -77,7 +77,7 @@ a.button,
 
 /* === Content wrapper === */
 .content {
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.60);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -96,7 +96,7 @@ h1 {
 h2 {
   font-size: 1.2rem;
   margin-top: 2rem;
-  color: #4caf50;
+  color: #1b4d1b; /* dark green */
 }
 
 p, ul {
@@ -108,7 +108,7 @@ ul {
 }
 
 a {
-  color: #4caf50;
+  color: #1b4d1b; /* dark green */
   text-decoration: none;
 }
 
